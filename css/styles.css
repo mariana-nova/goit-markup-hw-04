@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -117,36 +117,39 @@ li {
   padding: auto;
   padding-left: 100px;
 }
-button:hover {
-  color: var(--text-color);
+.info-prin {
+  fill: var(--text-color);
+  margin-right: 10px;
+}
+.info-prin:hover {
+  fill: var(--brand-color);
+}
+.list-prin {
+  margin-right: 10px;
+}
+.list-prin:last-child {
+  margin-right: 0;
+}
+.button:hover,
+.button:focus {
+  border: 1px solid var(--brand-color);
   cursor: pointer;
 }
-.button:focus {
-  color: var(--text-color);
-}
+
 .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
+  box-shadow: 0px, 4px, 4px rgba(0, 0, 0, 0.15);
   color: #ffffff;
   background-color: var(--brand-color);
   border: none;
   border-radius: 4px;
-  display: block;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
-  margin-left: 470px;
   padding: 10px 32px;
-}
-.imagen-fondo {
-  background-image: url(/images/Imagen.png);
-  position: absolute;
-  width: 1600px;
-  height: 400px;
-  left: 0px;
-  top: 80px;
-  background-size: cover;
+  margin-left: 220px;
 }
 
 .titles-ventajas {
@@ -198,6 +201,9 @@ main .title {
   align-items: center;
   flex-direction: column;
   height: 60vh;
+  background-image: url(/images/Imagen.png);
+  filter: brightness(50%);
+  background-size: cover;
 }
 
 .content-title {
@@ -250,6 +256,23 @@ main .title {
   height: 323.7px;
   padding-right: 20px;
   padding-left: 0px;
+  box-sizing: content-box;
+}
+.text-img-cont {
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+.aplications {
+  position: relative;
+  bottom: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px 79px;
+  width: 373.16px;
 }
 .our-team {
   font-weight: 700;
@@ -276,9 +299,12 @@ main .title {
 }
 .list-team {
   width: 270px;
-  height: 368px;
+  height: 428px;
   margin-right: 30px;
   background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-e {
@@ -286,9 +312,9 @@ main .title {
   height: 260px;
 }
 .name {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.428em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.428emem;
   color: var(--text-color);
   text-align: center;
   letter-spacing: 0.03em;
@@ -297,7 +323,7 @@ main .title {
 }
 
 .profession {
-  font-size: 14px;
+  font-size: 16px;
   color: #757575;
   line-height: 1.71em;
   text-align: center;
@@ -441,14 +467,99 @@ address {
   color: var(--brand-color);
   cursor: pointer;
 }
+.contacts-footer-uno:hover,
+.contacts-footer-uno:focus {
+  color: var(--brand-color);
+  cursor: pointer;
+}
 .imagenes-vector {
   background: #f5f4fa;
   margin-bottom: 30px;
 }
-.icon {
+
+.contenedor-redes-sociales {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+.icon-social-team {
+  border-radius: 50%;
+  height: 44px;
+  margin-right: 10px;
+  padding: 12px;
+  fill: #afb1b8;
+}
+.icon-social-team:hover {
+  fill: #ffffff;
+  background-color: var(--brand-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+.icon-prin {
   margin: 25px 100px;
 }
-.contenedor-redes-sociales {
-  fill: #afb1b8;
+.section-clients {
+  padding-bottom: 151px;
+  padding-top: 56px;
+}
+.contenedor-clients {
   display: flex;
+  justify-content: center;
+}
+.clients {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  margin-right: 30px;
+}
+.clients:last-child {
+  margin-right: 0;
+}
+.icon-clients {
+  fill: #afb1b8;
+  padding: 12px 30px;
+  box-sizing: content-box;
+}
+.icon-clients:hover,
+.clients:hover {
+  border-color: var(--brand-color);
+  fill: var(--brand-color);
+}
+.social-footer {
+  margin-left: 70px;
+  margin-top: 32px;
+}
+.title-footer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  display: flex;
+}
+.contenedor-icon {
+  display: flex;
+}
+.icon-footer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  fill: #ffffff;
+}
+.icon-footer:last-child {
+  margin-right: 0;
+}
+.icon-footer:hover {
+  background: var(--brand-color);
+  cursor: pointer;
 }
