@@ -120,9 +120,6 @@ li {
   fill: #757575;
   margin-right: 10px;
 }
-.info-prin:hover {
-  fill: var(--brand-color);
-}
 .list-prin {
   margin-right: 10px;
 }
@@ -134,7 +131,10 @@ li {
   border: 1px solid var(--brand-color);
   cursor: pointer;
 }
-
+.link-contacts:hover .info-prin,
+.link-contacts:focus .info-prin {
+  fill: var(--brand-color);
+}
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -200,8 +200,8 @@ main .title {
   align-items: center;
   flex-direction: column;
   height: 600px;
-  background-image: linear-gradient(to top, #2f303a66);
-  background-image: url(../images/foto.png), url(../images/foto.png);
+  background-image: linear-gradient(to top, #2f303a66, #2f303a66),
+    url(../images/foto.jpg);
   background-size: cover;
 }
 
@@ -348,10 +348,15 @@ main .title {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-blue {
   font-family: "Roboto";
@@ -367,6 +372,14 @@ main .title {
   height: 38px;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.button-blue:hover,
+.button-blue:focus,
+.button-blue:active {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .cuerpo-port {
@@ -547,18 +560,18 @@ address {
 }
 .contenedor-icon {
   display: flex;
+  padding: 0;
 }
 .icon-footer {
   background: rgba(255, 255, 255, 0.1);
-  padding: 12px;
   border-radius: 50%;
   margin-right: 10px;
   fill: #ffffff;
+  padding: 12px;
 }
 .icon-footer:last-child {
   margin-right: 0;
 }
 .icon-footer:hover {
   background: var(--brand-color);
-  cursor: pointer;
 }
